@@ -30,8 +30,8 @@ class DriveTrain : public frc::Subsystem {
   Victor m_shootFour {SHOOT_FOUR};
 
   //variables to hook up motors to controller
-  double contrX = m_joyStick.GetX(GenericHID::kLeftHand);
-  double contrY = m_joyStick.GetY(GenericHID::kRightHand);
+  double leftY = m_joyStick.GetY(GenericHID::kLeftHand);
+  double rightY = m_joyStick.GetY(GenericHID::kRightHand);
   XboxController m_joyStick{XBOX_CONTROLLER};
  public:
  // Definition of commands
@@ -40,5 +40,6 @@ class DriveTrain : public frc::Subsystem {
   void InitDefaultCommand() override;
   void StopDrive();
   void InvertDriveMotors();
+ 
 
 };

@@ -11,15 +11,11 @@ DriveTrain::DriveTrain() : Subsystem("DriveTrain") {}
 
 void DriveTrain::TeleopDrive(XboxController* m_joyStick) 
 {
-  //makes leftJoystickX and Y hook up to the left joystick on the controller
-  //aka Arcade Drive. Sue me
-double leftJoystickX = m_joyStick->GetX(GenericHID::kLeftHand);
-double leftJoystickY = m_joyStick->GetY(GenericHID::kLeftHand);
 
-  m_driveOne.Set(leftJoystickX + leftJoystickY);
-  m_driveTwo.Set(leftJoystickX + leftJoystickY);
-  m_driveThree.Set(leftJoystickX + leftJoystickY);
-  m_driveFour.Set(leftJoystickX + leftJoystickY);
+  m_driveOne.Set(leftY + rightY);
+  m_driveTwo.Set(leftY + rightY);
+  m_driveThree.Set(leftY - rightY);
+  m_driveFour.Set(leftY - rightY);
 } 
 void DriveTrain::InitDefaultCommand() 
 {
@@ -29,7 +25,7 @@ void DriveTrain::InitDefaultCommand()
 //Emergency drive motor stop
 void DriveTrain::StopDrive() 
 {
- m_driveOne.Set(0.0);
+  m_driveOne.Set(0.0);
   m_driveTwo.Set(0.0);
   m_driveThree.Set(0.0);
   m_driveFour.Set(0.0);
