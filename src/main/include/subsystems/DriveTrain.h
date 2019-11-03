@@ -6,10 +6,11 @@
 /*----------------------------------------------------------------------------*/
 
 #pragma once
-#include <RobotMap.h>
-#include <frc/Victor.h>
+
 #include <frc/commands/Subsystem.h>
+#include <frc/Victor.h>
 #include <frc/XboxController.h>
+#include "RobotMap.h"
 
 using namespace frc;
 
@@ -24,15 +25,6 @@ class DriveTrain : public frc::Subsystem {
   Victor m_driveThree {DRIVE_THREE};
   Victor m_driveFour {DRIVE_FOUR};
 
-  Victor m_shootOne {SHOOT_ONE};
-  Victor m_shootTwo {SHOOT_TWO};
-  Victor m_shootThree {SHOOT_THREE};
-  Victor m_shootFour {SHOOT_FOUR};
-
-  //variables to hook up motors to controller
-  double leftY = m_joyStick.GetY(GenericHID::kLeftHand);
-  double rightY = m_joyStick.GetY(GenericHID::kRightHand);
-  XboxController m_joyStick{XBOX_CONTROLLER};
  public:
  // Definition of commands
   DriveTrain();
@@ -40,6 +32,4 @@ class DriveTrain : public frc::Subsystem {
   void InitDefaultCommand() override;
   void StopDrive();
   void InvertDriveMotors();
- 
-
 };

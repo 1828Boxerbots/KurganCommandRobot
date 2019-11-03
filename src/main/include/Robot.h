@@ -18,6 +18,8 @@ class Robot : public frc::TimedRobot {
  
   static OI m_oi;
 
+  static std::shared_ptr <DriveTrain> m_driveTrain;
+
   void RobotInit() override;
   void RobotPeriodic() override;
   void DisabledInit() override;

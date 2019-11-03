@@ -5,14 +5,16 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "OI.h"
+#pragma once
 
-//#include <frc/WPILib.h>
+#include <frc/commands/Command.h>
 
-XboxController* OI::GetController()
-{
-  return &controller;
-}
-OI::OI() {
-  // Process operator interface input here.
-}
+class DriveTrainCMD : public frc::Command {
+ public:
+  DriveTrainCMD();
+  void Initialize() override;
+  void Execute() override;
+  bool IsFinished() override;
+  void End() override;
+  void Interrupted() override;
+};

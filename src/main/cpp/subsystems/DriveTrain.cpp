@@ -11,11 +11,12 @@ DriveTrain::DriveTrain() : Subsystem("DriveTrain") {}
 
 void DriveTrain::TeleopDrive(XboxController* m_joyStick) 
 {
-
-  m_driveOne.Set(leftY + rightY);
-  m_driveTwo.Set(leftY + rightY);
-  m_driveThree.Set(leftY - rightY);
-  m_driveFour.Set(leftY - rightY);
+  double leftY = m_joyStick.GetY(GenericHID::kLeftHand);
+  double rightY = m_joyStick.GetY(GenericHID::kRightHand);
+  m_driveOne.Set(leftY);
+  m_driveTwo.Set(leftY);
+  m_driveThree.Set(rightY);
+  m_driveFour.Set(rightY);
 } 
 void DriveTrain::InitDefaultCommand() 
 {

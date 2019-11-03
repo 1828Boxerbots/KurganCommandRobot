@@ -27,12 +27,14 @@
 
 constexpr int DRIVE_ONE = 1;
 constexpr int DRIVE_TWO = 2;
-constexpr int DRIVE_THREE = 7; 
-constexpr int DRIVE_FOUR = 8;
+constexpr int DRIVE_THREE = 3; 
+constexpr int DRIVE_FOUR = 4;
 
 constexpr int SHOOT_ONE = 5;
 constexpr int SHOOT_TWO = 6;
-constexpr int SHOOT_THREE = 3;
-constexpr int SHOOT_FOUR = 4;
+constexpr int SHOOT_THREE = 7;
+constexpr int SHOOT_FOUR = 8;
+
+constexpr int LOADER = 0;
 
 constexpr int XBOX_CONTROLLER = 0;

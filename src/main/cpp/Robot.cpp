@@ -10,6 +10,7 @@
 #include <frc/commands/Scheduler.h>
 #include <frc/smartdashboard/SmartDashboard.h>
 
+std::shared_ptr <DriveTrain> Robot::m_driveTrain = std::make_shared<DriveTrain>();
 
 OI Robot::m_oi;
 
