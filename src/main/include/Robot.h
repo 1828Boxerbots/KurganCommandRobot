@@ -13,6 +13,10 @@
 
 #include "OI.h"
 
+#include "commands/DriveTrainCMD.h"
+
+#include "subsystems/DriveTrain.h"
+
 class Robot : public frc::TimedRobot {
  public:
  

@@ -11,7 +11,7 @@
 
 XboxController* OI::GetController()
 {
-  return &controller;
+  return &m_joyStick;
 }
 OI::OI() {
   // Process operator interface input here.

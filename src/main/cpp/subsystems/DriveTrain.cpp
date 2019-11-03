@@ -11,8 +11,8 @@ DriveTrain::DriveTrain() : Subsystem("DriveTrain") {}
 
 void DriveTrain::TeleopDrive(XboxController* m_joyStick) 
 {
-  double leftY = m_joyStick.GetY(GenericHID::kLeftHand);
-  double rightY = m_joyStick.GetY(GenericHID::kRightHand);
+  double leftY = m_joyStick->GetY(GenericHID::kLeftHand);
+  double rightY = m_joyStick->GetY(GenericHID::kRightHand);
   m_driveOne.Set(leftY);
   m_driveTwo.Set(leftY);
   m_driveThree.Set(rightY);
