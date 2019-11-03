@@ -34,8 +34,8 @@ void DriveTrain::StopDrive()
 //Here to  "conviently" change motors inverted or not
 void DriveTrain::InvertDriveMotors()
 {
-m_driveOne.SetInverted(false);
-m_driveTwo.SetInverted(false);
+m_driveOne.SetInverted(true);
+m_driveTwo.SetInverted(true);
 m_driveThree.SetInverted(false);
 m_driveFour.SetInverted(false);
 }
