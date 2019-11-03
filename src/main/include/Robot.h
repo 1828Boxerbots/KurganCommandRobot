@@ -14,8 +14,12 @@
 #include "OI.h"
 
 #include "commands/DriveTrainCMD.h"
+#include "commands/LoaderCMD.h"
+#include "commands/ShooterCMD.h"
 
 #include "subsystems/DriveTrain.h"
+#include "subsystems/Loader.h"
+#include "subsystems/Shooter.h"
 
 class Robot : public frc::TimedRobot {
  public:
@@ -23,6 +27,8 @@ class Robot : public frc::TimedRobot {
   static OI m_oi;
 
   static std::shared_ptr <DriveTrain> m_driveTrain;
+  static std::shared_ptr <Loader> m_loader;
+  static std::shared_ptr <Shooter> m_shooter;
 
   void RobotInit() override;
   void RobotPeriodic() override;
@@ -40,4 +46,6 @@ class Robot : public frc::TimedRobot {
   frc::Command* m_autonomousCommand = nullptr;
 
   DriveTrainCMD m_driveTrainCMD;
+  LoaderCMD m_loaderCMD;
+  ShooterCMD m_shooterCMD;
 };

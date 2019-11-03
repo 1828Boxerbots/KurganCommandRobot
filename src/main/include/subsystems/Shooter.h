@@ -14,22 +14,21 @@
 
 using namespace frc;
 
-class DriveTrain : public frc::Subsystem {
+class Shooter : public frc::Subsystem {
  private:
   // It's desirable that everything possible under private except
   // for methods that implement subsystem capabilities
 
   //Victor Motors w/ Port Numbers
-  Victor m_driveOne {DRIVE_ONE};
-  Victor m_driveTwo {DRIVE_TWO};
-  Victor m_driveThree {DRIVE_THREE};
-  Victor m_driveFour {DRIVE_FOUR};
+  Victor m_shootOne {SHOOT_ONE};
+  Victor m_shootTwo {SHOOT_TWO};
+  Victor m_shootThree {SHOOT_THREE};
+  Victor m_shootFour {SHOOT_FOUR};
 
  public:
- // Definition of commands
-  DriveTrain();
-  void TeleopDrive(XboxController* m_joyStick);
+ // Definition of Commands
+  Shooter();
+  void TeleopShooter(XboxController* m_joyStick);
+  void StopMotors();
   void InitDefaultCommand() override;
-  void StopDrive();
-  void InvertDriveMotors();
 };
