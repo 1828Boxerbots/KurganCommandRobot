@@ -16,9 +16,9 @@ std::shared_ptr <Shooter> Robot::m_shooter = std::make_shared<Shooter>();
 
 OI Robot::m_oi;
 
-void Robot::RobotInit() {
+void Robot::RobotInit() 
+{
  
-  //frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
 }
 
 /**
